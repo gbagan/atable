@@ -1,0 +1,23 @@
+@import "./base.css";
+
+@font-face {
+  font-family: 'Nunito Sans';
+  src: url('./fonts/NunitoSans-VariableFont.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Shantell Sans';
+  src: url('./fonts/Shantell_Sans-Informal_Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+:root {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 16px;
+}
