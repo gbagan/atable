@@ -102,7 +102,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Fredoka One', cursive;
+    font-family: 'Shantell Sans', cursive;
     font-size: 36px;
     color: #1a1a1a;
     letter-spacing: 1px;
@@ -138,7 +138,7 @@
   }
 
   .reject-names span {
-    font-family: 'Fredoka One', cursive;
+    font-family: 'Shantell Sans', cursive;
     font-size: 16px;
     color: #1a1a1a;
   }
@@ -153,7 +153,7 @@
   }
 
   .big-name {
-    font-family: 'Fredoka One', cursive;
+    font-family: 'Shantell Sans', cursive;
     font-size: 64px;
     color: #1a1a1a;
     line-height: 1;
@@ -168,7 +168,7 @@
   }
 
   .family-name {
-    font-family: 'Fredoka One', cursive;
+    font-family: 'Shantells Sans', cursive;
     font-size: 30px;
     color: #1a1a1a;
     letter-spacing: 2px;
@@ -183,6 +183,6 @@
     border: 1.5px solid #ddd;
     border-radius: 6px;
     padding: 2px 8px;
-    font-family: 'Patrick Hand', cursive;
+    font-family: 'Shantell Sans', cursive;
   }
 </style>

@@ -33,14 +33,14 @@
 </script>
 
 <div class="page">
-  <div class="fiches2">
+  <div class="fiches2" style:transform="translateY({names.length > 12 ? "2cm" : "5cm"}) rotate(90deg);">
     {#each names as name, i}
       <div class="fiche2">
-        <div class="fiche2-title">{name}</div>
+        <div class="fiche2-title">{name.name}</div>
         <div class="fiche2-enemies">
-          {#each nbors(i) as j}
+          {#each enemies(i) as enemy}
             <div class="fiche2-enemy">
-              {names[j]}
+              {enemy}
             </div>
           {/each}
         </div>
@@ -142,7 +142,6 @@
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 0.5cm;
-    transform: rotate(90deg) translateX(2cm);
   }
 
   .fiche2 {
