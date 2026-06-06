@@ -1,13 +1,14 @@
 <script lang="ts">
-    import { range } from "@gbagan/utils";
-    import { chunks } from "../utils";
-    import Fiche from "./Fiche.svelte";
+  import { range } from "@gbagan/utils";
+  import { chunks } from "../utils";
+  import Fiche from "./Fiche.svelte";
 
   type Props = {
     names: { name: string, label: string }[];
+    restart: () => void;
   }
 
-  let { names }: Props = $props();
+  let { names, restart }: Props = $props();
 
   const graph =  {
     layout:[{"x":0.5326952465213545,"y":0.41293332260918525},{"x":0.05592475669588997,"y":0.5766860371591732},{"x":0.3637899139387115,"y":0.23245596396686238},{"x":0.1659293814847583,"y":0.10407785731520952},{"x":0.8093782675138743,"y":0.061610230837287866},{"x":0.8762969516609025,"y":0.36917879835920536},{"x":0.6807287058634279,"y":0.5353494731762246},{"x":0.8582803828520872,"y":0.6561570015281911},{"x":0.5095310866243062,"y":0.7513874366605002},{"x":0.36025094506555133,"y":0.5815169307488136},{"x":0.047258304512185316,"y":0.29612221507279013},{"x":0.33579988739644495,"y":0.855626156197217},{"x":0.6832622858521676,"y":0.844044076248693},{"x":0.21734496903402237,"y":0.2966952867369098},{"x":0.6526381404327194,"y":0.22371913456124828},{"x":0.9552300329767555,"y":0.5092998471808896},{"x":0.23542186117590283,"y":0.5866645218370465},{"x":0.19616645218370465,"y":0.7317823534143006}],
@@ -32,8 +33,22 @@
 
 </script>
 
+<div class="notprinted">
+  <button class="ui-button" onclick={restart}>Retour en arrière</button>
+  <button class="ui-button" onclick={() => window.print()}>Imprimer</button>
+  <ul>
+    <li>Imprimez la page en utilsant Control + P</li>
+    <li>Activez l'impression des graphismes d'arrière-plan</li>
+    <li>Désactivez l'impression d'entêtes et pieds de pages</li>
+  </ul>
+</div>
+
+
 <div class="page">
-  <div class="fiches2" style:transform="translateY({names.length > 12 ? "2cm" : "5cm"}) rotate(90deg);">
+  <div
+    class="fiches2"
+    style:transform="translateY({names.length > 12 ? "2cm" : names.length > 6 ? "5cm" : "8cm"}) rotate(90deg);"
+  >
     {#each names as name, i}
       <div class="fiche2">
         <div class="fiche2-title">{name.name}</div>
@@ -127,6 +142,12 @@
     display: none;
   }
 
+  .notprinted ul {
+    margin-top: 1rem;
+    list-style-type: disc;
+    padding-left: 1.5rem;
+  }
+
   @media print {
     .page {
       display: block;
@@ -135,6 +156,10 @@
       overflow: hidden;
       break-after: page;
       box-sizing: border-box;
+    }
+
+    .notprinted {
+      display: none;
     }
   }
 

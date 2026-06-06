@@ -1,10 +1,12 @@
 <script lang="ts">
   import Input from "./components/Input.svelte";
   import Generator from "./components/Generator.svelte";
+  import { tick } from "svelte";
 
-  let names: { name: string, label: string }[] | null = $state(null); 
+  let names: { name: string, label: string }[] | null = $state.raw(null);
+  let input = $state.raw("")
 
-  function run(input: string) {
+  async function run() {
     const res = [];
     const parsed = input.split('\n').map(s => s.trim()).filter(s => s.length > 0);
     if (parsed.length === 0) return;
@@ -14,11 +16,17 @@
       res.push({ name: words[0], label: words[1] });
     }
     names = res;
+    await tick();
+    window.print();
+  }
+
+  function restart() {
+    names = null;
   }
 </script>
 
 {#if names === null}
-  <Input {run} />
+  <Input bind:input={input} {run} />
 {:else}
-  <Generator {names} />
+  <Generator {names} {restart }/>
 {/if}

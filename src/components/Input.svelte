@@ -1,20 +1,19 @@
 <script lang="ts">
   type Props = {
-    run: (input: string) => void;
+    input: string;
+    run: () => void;
   }
 
-  let { run }: Props = $props();
-  let text = $state('');
-
+  let { input = $bindable(), run }: Props = $props();
 </script>
 
 <textarea
   placeholder="Entrez les prénoms, un par ligne"
-  bind:value={text}
+  bind:value={input}
   cols="20"
   rows="25"
 ></textarea>
-<button onclick={() => run(text)}>Générer</button>
+<button class="ui-button" onclick={run}>Générer</button>
 
 <style>
   textarea {
