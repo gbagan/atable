@@ -7,19 +7,28 @@
   let { input = $bindable(), run }: Props = $props();
 </script>
 
-<h1>Générateur de fiches pour A Table!</h1>
+<div class="wrapper">
+  <h1>Générateur de fiches pour A Table!</h1>
 
-<textarea
-  placeholder="Entrez les prénoms, un par ligne"
-  bind:value={input}
-  cols="20"
-  rows="25"
-></textarea>
-<button class="ui-button" onclick={run}>Générer</button>
+  <textarea
+    placeholder="Entrez les prénoms, un par ligne"
+    bind:value={input}
+    cols="20"
+    rows="25"
+  ></textarea>
+  <button class="ui-button" onclick={run}>Générer</button>
+</div>
+
 
 <style>
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
   h1 {
-    text-align: center;
     font-size: 1.75rem;
     font-weight: bold;
   }

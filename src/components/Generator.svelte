@@ -68,8 +68,8 @@
     <svg viewBox="0 0 1500 1000">
       {#each graph.edges as [u, v]}
         {#if u < names.length && v < names.length}
-          {@const p1 = graph.layout[u]}
-          {@const p2 = graph.layout[v]}
+          {const p1 = graph.layout[u]}
+          {const p2 = graph.layout[v]}
           <line
             x1={1500*p1.x}
             y1={1000*p1.y}
@@ -81,7 +81,7 @@
         {/if}
       {/each}
       {#each names as name, i}
-        {@const  {x, y} = graph.layout[i]}
+        {const  {x, y} = graph.layout[i]}
         <circle
           cx={1500*x}
           cy={1000*y}
@@ -106,7 +106,7 @@
   <div class="graph">
     <svg viewBox="0 0 1500 1000">
       {#each names as name, i}
-        {@const  {x, y} = graph.layout[i]}
+        {const  {x, y} = graph.layout[i]}
         <circle
           cx={1500*x}
           cy={1000*y}
@@ -134,7 +134,6 @@
     {/each}
   </div>
 {/each}
-
 
 <style>
   .page {
