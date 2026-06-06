@@ -143,7 +143,6 @@
     color: #1a1a1a;
   }
 
-  /* ─── CARTE DROITE ─── */
   .card-right {
     display: flex;
     flex-direction: column;
@@ -168,7 +167,7 @@
   }
 
   .family-name {
-    font-family: 'Shantells Sans', cursive;
+    font-family: 'Shantell Sans', cursive;
     font-size: 30px;
     color: #1a1a1a;
     letter-spacing: 2px;

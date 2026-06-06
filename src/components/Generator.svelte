@@ -176,13 +176,13 @@
     width: 4.2cm;
     height: 6cm;
     border-radius: 1cm;
-    gap: 1cm;
+    gap: 0.5cm;
   }
 
   .fiche2-title {
+    font-size: 0.8cm;
     font-weight: bold;
-    font-size: 0.7cm;
-    font-family: 'Shantell Sans';
+    font-family: 'Shantell Sans', cursive;
   }
 
   .fiche2-enemies {
