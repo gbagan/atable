@@ -1,6 +1,5 @@
 <script lang="ts">
-  import { range } from "@gbagan/utils";
-  import { chunks } from "../utils";
+  import { chunks, range } from "@gbagan/utils";
   import Fiche from "./Fiche.svelte";
 
   type Props = {
