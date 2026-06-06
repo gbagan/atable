@@ -7,6 +7,8 @@
   let { input = $bindable(), run }: Props = $props();
 </script>
 
+<h1>Générateur de fiches pour A Table!</h1>
+
 <textarea
   placeholder="Entrez les prénoms, un par ligne"
   bind:value={input}
@@ -16,6 +18,12 @@
 <button class="ui-button" onclick={run}>Générer</button>
 
 <style>
+  h1 {
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: bold;
+  }
+
   textarea {
     display: block;
     padding: 0.625rem;
