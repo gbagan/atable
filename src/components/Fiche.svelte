@@ -1,10 +1,11 @@
 <script lang="ts">
   type Props = {
     name: string;
+    label: string;
     enemies: string[];
   }
 
-  let { name, enemies }: Props = $props();
+  let { name, label, enemies }: Props = $props();
 </script>
 
 <div class="spread">
@@ -28,7 +29,7 @@
   <div class="card card-right">
     <div class="big-name">{name}</div>
     <div class="underline-name"></div>
-    <div class="family-name">Lovelace</div>
+    <div class="family-name">Label {label}</div>
     <div class="page-num">18</div>
   </div>
 </div>

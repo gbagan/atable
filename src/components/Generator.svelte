@@ -130,7 +130,7 @@
 {#each chunks(range(0, names.length), 3) as chk}
   <div class="page">
     {#each chk as i}
-      <Fiche name={names[i].name} enemies={enemies(i)} />
+      <Fiche name={names[i].name} label={names[i].label} enemies={enemies(i)} />
     {/each}
   </div>
 {/each}

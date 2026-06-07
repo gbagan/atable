@@ -41,7 +41,7 @@
 
 {#if names === null}
   <Input bind:input={input} {run} />
+  <Toaster />
 {:else}
   <Generator {names} {restart} />
 {/if}
-<Toaster />
