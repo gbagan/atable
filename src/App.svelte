@@ -16,7 +16,7 @@
       if (parsed.length === 0) throw Error("Entrée vide");
       if (parsed.length > 18) throw Error("Limité à 18 personnes");
       for (const line of parsed) {
-        const words = line.split(' ').map(s => s.trim()).filter(s => s.length > 0);
+        const words = line.split(',').map(s => s.trim()).filter(s => s.length > 0);
         if (words.length !== 2) throw Error(`Ligne "${line}" invalide`);
         const [name, label] = words;
         if (label.length > 2) throw Error("Les labels doivent avoir au plus 2 caractères")

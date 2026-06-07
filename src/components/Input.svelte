@@ -11,7 +11,7 @@
   <h1>Générateur de fiches pour A Table!</h1>
 
   <textarea
-    placeholder="Entrez les prénoms et labels séparés par un espace, un par ligne"
+    placeholder="Entrez les prénoms et labels séparés par une virgule, un par ligne"
     bind:value={input}
     cols="40"
     rows="25"

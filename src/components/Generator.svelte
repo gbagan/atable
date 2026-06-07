@@ -44,10 +44,7 @@
 
 
 <div class="page">
-  <div
-    class="fiches2"
-    style:transform="translateY({names.length > 12 ? "2cm" : names.length > 6 ? "5cm" : "8cm"}) rotate(90deg);"
-  >
+  <div class="fiches2">
     {#each names as name, i}
       <div class="fiche2">
         <div class="fiche2-title">{name.name}</div>
@@ -127,11 +124,13 @@
   </div>
 </div>
 
-{#each chunks(range(0, names.length), 3) as chk}
+{#each chunks(range(0, names.length), 4) as chk}
   <div class="page">
-    {#each chk as i}
-      <Fiche name={names[i].name} label={names[i].label} enemies={enemies(i)} />
-    {/each}
+    <div class="fiches">
+      {#each chk as i}
+        <Fiche name={names[i].name} enemies={enemies(i)} />
+      {/each}
+    </div>
   </div>
 {/each}
 
@@ -148,12 +147,12 @@
 
   @media print {
     .page {
-      display: block;
-      width: 210mm;
-      height: 297mm;
       overflow: hidden;
+      size: A4 landscape;
       break-after: page;
-      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .notprinted {
@@ -197,7 +196,12 @@
   .graph {
     width: 27cm;
     height: 18cm;
-    transform: rotate(90deg) translate(6cm, 2cm);
   }
 
+
+  .fiches {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.25cm;
+  }
 </style>

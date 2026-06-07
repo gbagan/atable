@@ -1,11 +1,10 @@
 <script lang="ts">
   type Props = {
     name: string;
-    label: string;
     enemies: string[];
   }
 
-  let { name, label, enemies }: Props = $props();
+  let { name, enemies }: Props = $props();
 </script>
 
 <div class="spread">
@@ -29,18 +28,13 @@
   <div class="card card-right">
     <div class="big-name">{name}</div>
     <div class="underline-name"></div>
-    <div class="family-name">Label {label}</div>
-    <div class="page-num">18</div>
   </div>
 </div>
 
 <style>
   .spread {
     display: flex;
-    gap: 8px;
-    width: 20cm;
-    width: 100%;
-    margin-bottom: 0.5cm;
+    gap: 0.25cm;
   }
 
   .card {
@@ -50,26 +44,27 @@
     padding: 28px 20px;
     flex: 1;
     position: relative;
-    min-height: 340px;
+    height: 9.5cm;
   }
 
   .card-left {
+    width: 7cm;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 24px;
+    gap: 0.6cm;
   }
 
   .je-suis-label {
     font-family: cursive;
-    font-size: 15px;
+    font-size: 0.375cm;
     color: #333;
     letter-spacing: 0.5px;
   }
 
   .oval-wrap {
-    width: 180px;
-    height: 80px;
+    width: 4.9cm;
+    height: 2.2cm;
     position: relative;
     border-radius: 50%;
     overflow: hidden;
@@ -104,7 +99,7 @@
     align-items: center;
     justify-content: center;
     font-family: 'Shantell Sans', cursive;
-    font-size: 36px;
+    font-size: 0.9cm;
     color: #1a1a1a;
     letter-spacing: 1px;
   }
@@ -123,7 +118,7 @@
     writing-mode: vertical-rl;
     text-orientation: mixed;
     transform: rotate(180deg);
-    font-size: 11px;
+    font-size: 0.3cm;
     color: #888;
     padding: 0 8px;
     letter-spacing: 0.5px;
@@ -145,16 +140,17 @@
   }
 
   .card-right {
+    width: 7cm;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 40px;
+    padding-bottom: 1cm;
   }
 
   .big-name {
     font-family: 'Shantell Sans', cursive;
-    font-size: 64px;
+    font-size: 1.1cm;
     color: #1a1a1a;
     line-height: 1;
     margin-bottom: 4px;
@@ -165,24 +161,5 @@
     height: 2px;
     background: #1a1a1a;
     margin: 0 auto 10px auto;
-  }
-
-  .family-name {
-    font-family: 'Shantell Sans', cursive;
-    font-size: 30px;
-    color: #1a1a1a;
-    letter-spacing: 2px;
-  }
-
-  .page-num {
-    position: absolute;
-    bottom: 14px;
-    right: 16px;
-    font-size: 13px;
-    color: #bbb;
-    border: 1.5px solid #ddd;
-    border-radius: 6px;
-    padding: 2px 8px;
-    font-family: 'Shantell Sans', cursive;
   }
 </style>
