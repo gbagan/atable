@@ -33,10 +33,10 @@
 </script>
 
 <div class="notprinted">
-  <button class="ui-button" onclick={restart}>Retour en arrière</button>
+  <button class="ui-button" onclick={restart}>Retour</button>
   <button class="ui-button" onclick={() => window.print()}>Imprimer</button>
   <ul>
-    <li>Imprimez la page en utilsant Control + P</li>
+    <li>Imprimez la page (Control + P)</li>
     <li>Activez l'impression des graphismes d'arrière-plan</li>
     <li>Désactivez l'impression d'entêtes et pieds de pages</li>
   </ul>
