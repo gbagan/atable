@@ -9,14 +9,21 @@
 
   async function run() {
     const res = [];
+    const nameSet = new Set<string>();
+    const labelSet = new Set<string>();
     const parsed = input.split('\n').map(s => s.trim()).filter(s => s.length > 0);
     try {
       if (parsed.length === 0) throw Error("Entrée vide");
       for (const line of parsed) {
         const words = line.split(' ').map(s => s.trim()).filter(s => s.length > 0);
         if (words.length !== 2) throw Error(`Ligne "${line}" invalide`);
-        if (words[1].length > 2) throw Error("Les labels doivent avoir au plus 2 caractères")
-        res.push({ name: words[0], label: words[1] });
+        const [name, label] = words;
+        if (label.length > 2) throw Error("Les labels doivent avoir au plus 2 caractères")
+        if(nameSet.has(name)) throw Error(`Le prénom "${name}" apparait deux fois`);
+        if(labelSet.has(label)) throw Error(`Le label "${label}" apparait deux fois`);
+        nameSet.add(words[0]);
+        labelSet.add(words[1]);
+        res.push({ name, label });
       }
       if (res.length > 18) throw Error("Limité à 18 personnes");
       names = res;

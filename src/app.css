@@ -11,6 +11,7 @@
 }
 
 :root {
+  --mono: ui-monospace, Consolas, monospace;
   font-family: 'Inter', Arial;
   font-size: 16px;
 }
