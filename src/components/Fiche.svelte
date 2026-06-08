@@ -41,7 +41,7 @@
     background: white;
     border-radius: 16px;
     box-shadow: 0 2px 12px rgba(0,0,0,0.12);
-    padding: 28px 20px;
+    padding: 0.7cm 0.5cm;
     flex: 1;
     position: relative;
     height: 9.5cm;
@@ -78,16 +78,16 @@
       repeating-linear-gradient(
         0deg,
         transparent,
-        transparent 14px,
-        rgba(255,255,255,0.55) 14px,
-        rgba(255,255,255,0.55) 28px
+        transparent 0.35cm,
+        rgba(255,255,255,0.55) 0.3cm,
+        rgba(255,255,255,0.55) 0.7cm
       ),
       repeating-linear-gradient(
         90deg,
         transparent,
-        transparent 14px,
-        rgba(255,255,255,0.55) 14px,
-        rgba(255,255,255,0.55) 28px
+        transparent 0.35cm,
+        rgba(255,255,255,0.55) 0.35cm,
+        rgba(255,255,255,0.55) 0.7cm
       );
     border-radius: 50%;
   }
@@ -111,7 +111,7 @@
     width: 100%;
     border: 1.5px dashed #e88;
     border-radius: 10px;
-    padding: 14px 10px 14px 0;
+    padding: 0.35cm 0.25cm 0.35cm 0;
   }
 
   .reject-label {
@@ -135,7 +135,7 @@
 
   .reject-names span {
     font-family: 'Shantell Sans', cursive;
-    font-size: 16px;
+    font-size: 0.45cm;
     color: #1a1a1a;
   }
 

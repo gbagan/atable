@@ -135,6 +135,11 @@
 {/each}
 
 <style>
+  @page {
+    size: A4 landscape;
+    margin: 0;
+  }
+
   .page {
     display: none;
   }
@@ -146,9 +151,15 @@
   }
 
   @media print {
-    .page {
-      overflow: hidden;
+    @page {
       size: A4 landscape;
+      margin: 0;
+    }
+
+    .page {
+      width: 297mm;
+      height: 210mm;
+      overflow: hidden;
       break-after: page;
       display: flex;
       align-items: center;
