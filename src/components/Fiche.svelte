@@ -13,7 +13,7 @@
 
     <div class="oval-wrap">
       <div class="gingham-bg"></div>
-      <div class="oval-name">{name}</div>
+      <div class={["oval-name", {small: name.length > 9}]}>{name}</div>
     </div>
 
     <div class="reject-block">
@@ -101,8 +101,13 @@
     font-family: 'Shantell Sans', cursive;
     font-size: 0.9cm;
     color: #1a1a1a;
-    letter-spacing: 1px;
+
+    &.small {
+      font-size: 0.6cm;
+    }
   }
+
+
 
   .reject-block {
     display: flex;

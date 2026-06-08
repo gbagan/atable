@@ -19,7 +19,7 @@
         const words = line.split(',').map(s => s.trim()).filter(s => s.length > 0);
         if (words.length !== 2) throw Error(`Ligne "${line}" invalide`);
         const [name, label] = words;
-        if (label.length > 2) throw Error("Les labels doivent avoir au plus 2 caractères")
+        if (label.length > 3) throw Error("Les labels doivent avoir au plus 3 caractères")
         if (nameSet.has(name)) throw Error(`Le prénom "${name}" apparait deux fois`);
         if (labelSet.has(label)) throw Error(`Le label "${label}" apparait deux fois`);
         nameSet.add(name);

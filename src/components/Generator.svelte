@@ -47,7 +47,7 @@
   <div class="fiches2">
     {#each names as name, i}
       <div class="fiche2">
-        <div class="fiche2-title">{name.name}</div>
+        <div class={["fiche2-title", {small: name.name.length > 9}]}>{name.name}</div>
         <div class="fiche2-rejected-list">
           {#each enemies(i) as enemy}
             <div class="fiche2-rejected">
@@ -192,6 +192,9 @@
     font-size: 0.8cm;
     font-weight: bold;
     font-family: 'Shantell Sans', cursive;
+    &.small {
+      font-size: 0.5cm;
+    }
   }
 
   .fiche2-rejected-list {
